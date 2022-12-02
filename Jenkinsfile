@@ -9,7 +9,7 @@ pipeline {
         }
         stage('execution') {
             steps {
-                sh 'docker container run mynginx',
+                sh 'docker container run -d mynginx:latest sleep 1d'
                 sh 'docker container ls'
                 
             }
