@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('vcs') {
             steps {
-                git branch='main',
-                    url='https://github.com/satishnamgadda/Dockerpractice.git' 
+                git branch: 'main',
+                    url: 'https://github.com/satishnamgadda/Dockerpractice.git' 
             }
         }
         stage('execution') {
