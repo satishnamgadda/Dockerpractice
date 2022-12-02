@@ -9,7 +9,8 @@ pipeline {
         }
         stage('execution') {
             steps {
-                sh 'docker image build -t mynginx .'
+                sh 'docker image build -t mynginx .',
+                sh 'docker image ls'
             }
         }
     }
