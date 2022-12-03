@@ -1,2 +1,2 @@
 FROM httpd
-CMD ["apachectl","-g","FOREGROUND"]
+CMD ["apachectl","-D","FOREGROUND"]
