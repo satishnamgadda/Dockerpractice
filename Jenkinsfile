@@ -1,16 +1,12 @@
 pipeline {
-    agent { label 'DCR'}
+    agent any
     stages {
-        stage('vcs') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/satishnamgadda/Dockerpractice.git' 
-            }
-        }
+        
         stage('execution') {
             steps {
-                sh 'docker container run -d mynginx:latest sleep 1d'
-                sh 'docker container ls'
+                sh """
+                docker image build -t nginx:1.0 .
+                """
                 
             }
         }

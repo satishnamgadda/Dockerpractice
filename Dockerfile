@@ -1,2 +1,2 @@
-FROM alpine
-CMD ["echo","hello docker"]
+FROM nginx
+CMD ["nginx","-g","daemon off;"]
