@@ -1,2 +1,2 @@
-FROM nginx
-CMD ["nginx","-g","daemon off;"]
+FROM httpd
+CMD ["apachectl","-g","FOREGROUND"]
