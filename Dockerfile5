@@ -1,0 +1,12 @@
+FROM python:3.10-bullseye
+LABEL author="me"
+LABEL project="learning"
+ARG BRANCH="master"
+RUN git clone https://github.com/satishnamgadda/flask-hello-world.git && \
+    cd /flask-hello-world && \
+    git checkout ${BRANCH} && \
+    mv hello.py app.py && \
+    pip3 install flask
+EXPOSE 5000
+WORKDIR  /flask-hello-world
+CMD ["flask","run","-h","0.0.0.0"] 

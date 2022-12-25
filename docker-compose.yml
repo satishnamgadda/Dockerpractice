@@ -1,0 +1,8 @@
+---
+services:
+  app:
+    image: omrs:1.0
+    ports:
+      - "8005:80"
+  db:
+    image: mysql    

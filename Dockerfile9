@@ -1,0 +1,6 @@
+FROM maven:3.8.6-openjdk-11 as package
+LABEL author="me"
+LABEL project="training"
+RUN git clone https://github.com/shopizer-ecommerce/shopizer.git && \
+     cd shopizer && \
+     mvn package 
